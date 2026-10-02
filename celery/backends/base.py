@@ -785,7 +785,7 @@ class Backend:
         """
         result = self.encode_result(result, state)
 
-        kwargs.update({'task_id': task_id, 'state': state})
+        kwargs.update({'task_id': task_id, 'status': state})
 
         self._ensure_retryable(
             self._store_result,
